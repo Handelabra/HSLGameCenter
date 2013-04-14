@@ -12,4 +12,6 @@ typedef enum HSLAchievementStatus
 @interface HSLAchievement : _HSLAchievement {}
 // Custom logic goes here.
 
+- (BOOL) isNamed:(NSString*)name;
+
 @end

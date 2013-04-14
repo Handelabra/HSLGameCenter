@@ -21,6 +21,7 @@
 - (void) initializeAchievements
 {
     // Subclasses must implement
+    [self doesNotRecognizeSelector:_cmd];
 }
 
 - (HSLAchievement*) achievementWithIdentifier:(NSString*)identifier
