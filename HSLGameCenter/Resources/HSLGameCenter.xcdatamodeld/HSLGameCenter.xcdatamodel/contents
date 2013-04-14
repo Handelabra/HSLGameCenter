@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="Test1.xcdatamodel" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="872" systemVersion="11C74" minimumToolsVersion="Xcode 4.2" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="HSLAchievement" representedClassName="HSLAchievement" syncable="YES">
+        <attribute name="cachedAchievement" optional="YES" attributeType="Transformable" syncable="YES">
+            <userInfo>
+                <entry key="attributeValueClassName" value="GKAchievement"/>
+            </userInfo>
+        </attribute>
+        <attribute name="category" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="identifier" attributeType="String" syncable="YES"/>
+        <attribute name="progress" attributeType="Double" defaultValueString="0" syncable="YES"/>
+        <attribute name="progressDictionary" optional="YES" attributeType="Transformable" syncable="YES">
+            <userInfo>
+                <entry key="attributeValueClassName" value="NSMutableDictionary"/>
+            </userInfo>
+        </attribute>
+        <attribute name="status" attributeType="Integer 16" syncable="YES"/>
+        <attribute name="submitPartial" attributeType="Boolean" defaultValueString="YES" syncable="YES"/>
+        <relationship name="player" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="HSLPlayer" inverseName="achievements" inverseEntity="HSLPlayer" indexed="YES" syncable="YES"/>
+    </entity>
+    <entity name="HSLPlayer" representedClassName="HSLPlayer" syncable="YES">
+        <attribute name="failedScores" attributeType="Transformable" syncable="YES">
+            <userInfo>
+                <entry key="attributeValueClassName" value="NSMutableSet"/>
+            </userInfo>
+        </attribute>
+        <attribute name="playerID" attributeType="String" syncable="YES"/>
+        <relationship name="achievements" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="HSLAchievement" inverseName="player" inverseEntity="HSLAchievement" indexed="YES" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="HSLPlayer" positionX="135" positionY="2079" width="128" height="90"/>
+        <element name="HSLAchievement" positionX="394" positionY="2007" width="128" height="165"/>
+    </elements>
+</model>
