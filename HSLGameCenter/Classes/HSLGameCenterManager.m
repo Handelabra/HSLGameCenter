@@ -230,13 +230,6 @@
     return result;
 }
 
-- (void)loadFriendsWithCompletionHandler:(void(^)(NSArray *friends, NSError *error))completionHandler
-{
-    // We need to get the player's game center friends. All we need are the identifiers.
-    GKLocalPlayer *localPlayer = [GKLocalPlayer localPlayer];
-    [localPlayer loadFriendsWithCompletionHandler:completionHandler];
-}
-
 - (void) debugResetAchievements
 {
     [self.achievementHelper resetAchievements];
