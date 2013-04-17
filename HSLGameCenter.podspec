@@ -93,8 +93,8 @@ Pod::Spec.new do |s|
   #
   # Also allows the use of the FileList class like `source_files' does.
   #
-  # s.resource  = "icon.png"
-   s.resources = "HSLGameCenter/Resources/*"
+   s.resource  = "HSLGameCenter/Resources/HSLGameCenter.xcdatamodeld"
+  # s.resources = "HSLGameCenter/Resources/*"
 
   # A list of paths to preserve after installing the Pod.
   # CocoaPods cleans by default any file that is not used.
